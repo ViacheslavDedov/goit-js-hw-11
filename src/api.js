@@ -16,11 +16,10 @@ export default class ApiService {
         orientation: "horizontal",
         safesearch: true,
         per_page: this.per_page,
-        page:  this.page,
-        
+        page:  this.page,   
 })
     try {
-      const {data} =await axios.get(`https://pixabay.com/api/?${options}`);
+      const {data} = await axios.get(`https://pixabay.com/api/?${options}`);
       this.page += 1;
       return data; }
       catch{Notify.failure(error.message);}        
@@ -30,7 +29,7 @@ export default class ApiService {
        this.page = 1; 
     }
     get query() {
-      return  this.searchQuery;
+      return this.searchQuery;
     };
     set query(newQuery) {
         this.searchQuery = newQuery;

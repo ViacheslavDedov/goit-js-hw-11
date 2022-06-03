@@ -1,4 +1,4 @@
-export function renderMarkup(hits,  container) {
+export function renderMarkup(hits, container) {
     const markup = hits.map(({ largeImageURL, webformatURL, tags, likes, views, comments, downloads }) => {
    return  `<a class="post" href=${largeImageURL}>
     <div class="photo-card">
