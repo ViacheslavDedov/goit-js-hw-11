@@ -91,7 +91,7 @@ function notDisable() {
   refs.btnLoadMore.textContent = 'Load more';
 };
 function disable() {
-    refs.btnLoadMore.classList.add ('is-hidden');
+    refs.btnLoadMore.classList.add('is-hidden');
 };
 function enable() {
     refs.btnLoadMore.classList.remove('is-hidden');  
