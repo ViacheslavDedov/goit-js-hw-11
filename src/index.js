@@ -4,16 +4,13 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { renderMarkup } from './render-list';
 import ApiService from './api';
+import { getRefs } from './get-refs';
 
 
 const apiData = new ApiService();
 const gallery = new SimpleLightbox('.gallery a', {captionData: 'alt', captionDelay: 200});
 
-const refs = {
-  searchForm: document.querySelector('#search-form'),
-  btnLoadMore: document.querySelector('.load-more'),
-  galeryList: document.querySelector('.gallery')
-}
+const refs = getRefs();
 
 const container = refs.galeryList; 
 refs.searchForm.addEventListener('submit', renderImages);
@@ -71,7 +68,7 @@ function loadMore() {
     notDisable();
     gallery.refresh();
   
-    const { height: cardHeight } = document
+  const { height: cardHeight } = document
   .querySelector('.gallery')
   .firstElementChild.getBoundingClientRect();
 
