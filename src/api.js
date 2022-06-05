@@ -26,18 +26,18 @@ export default class ApiService {
   };
   
     resetPage() {
-       this.page = 1; 
+      this.page = 1; 
     }
-    get query() {
-      return this.searchQuery;
+      get query() {
+        return this.searchQuery;
     };
-    set query(newQuery) {
+      set query(newQuery) {
         this.searchQuery = newQuery;
   };
-   getCurrentPage() {
-    return this.page;
+    getCurrentPage() {
+      return this.page;
   };
-  getPer_page() {
-    return this.per_page;
+    getPer_page() {
+      return this.per_page;
   }
 }
